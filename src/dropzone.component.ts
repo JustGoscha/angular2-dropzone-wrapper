@@ -59,10 +59,6 @@ export class DropzoneComponent implements OnInit, DoCheck, OnDestroy, OnChanges 
 
     this.dropzone.on('success', (res) => {
       this.uploadSuccess.emit(res);
-
-      if (options.autoReset != null) {
-        setTimeout(() => this.reset(), options.autoReset);
-      }
     });
 
     this.dropzone.on('canceled', (res) => {
